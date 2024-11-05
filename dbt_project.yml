@@ -40,10 +40,10 @@ models:
 
     comercial:
       +materialized: table
-      intermediate:
+    intermediate:
         +schema: intermediate
 
-      marts:
+    marts:
         +schema: marts
     
     staging:
