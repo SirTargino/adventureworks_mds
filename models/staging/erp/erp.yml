@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: erp_adventureworks
+    description: 'Essa é a fonte do sistema ERP da Adventure Works'
+    database: FEA24_9
+    schema: raw_adventure_works   
+    tables:
+      - name: product
+
+      - name: productsubcategory
+
+      - name: productcategory
