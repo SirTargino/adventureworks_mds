@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_erp__subcategory
+    description: A tabela tem como finalidade preparar os dados da tabela subcategory para serem usados na construção da dim_products
+    columns:
+      - name: pk_subcategory
+        description: Chave primária da tabela de subcategoria.
+        data_tests:
+          - unique
+          - not_null

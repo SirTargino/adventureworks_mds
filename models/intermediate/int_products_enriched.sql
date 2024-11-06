@@ -6,7 +6,7 @@ with
 
     , subcategories as (
         select *
-        from {{ ref('stg_erp__subcatecory') }}
+        from {{ ref('stg_erp__subcategory') }}
     )
 
     , categories as (

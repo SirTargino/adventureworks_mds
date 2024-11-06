@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: int_products_enriched
+    description: Tabela intermediária que enriquece os dados da tabela produtos, acrescentando informações de subcategoria e categoria
+    columns:
+      - name: PK_PRODUCT
+        description: Chave primária da tabela de produtos
+        data_tests:
+          - unique
+          - not_null
+              
+      - name: PRODUCT_NAME
+        description: Nome do produto.
+        
+      - name: PRODUCT_NUMBER
+        description: Código do produto.
+        data_tests:
+          - unique
+          - not_null
+      
+      - name: SUBCATEGORY_NAME
+        description: Nome da subcategoria. Cada categoria de produtos da Adventure Works divide-se em várias subcategorias mais específicas
+        
+      - name: CATEGORY_NAME
+        description: Nome da categoria. Essas são as categorias gerais de produtos comercializados pela Adventure Works
+        
+      - name: STOCK
+        description: Quantidade de unidades do produto em estoque
