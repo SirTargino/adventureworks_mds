@@ -5,7 +5,7 @@ models:
     description: Tabela intermediária que enriquece os dados da tabela produtos, acrescentando informações de subcategoria e categoria
     columns:
       - name: PK_PRODUCT
-        description: blablabla.
+        description: Chave primária da tabela de produtos
         data_tests:
           - unique
           - not_null
