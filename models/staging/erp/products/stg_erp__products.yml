@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_erp__products
+    description: Essa tabela foi criada com o intuito de preparar os dados brutos de produtos para a criação da dimensão de produtos.
+    columns:
+      - name: pk_product
+        description: Chave primária da tabela de produtos.
+        data_tests:
+          - unique
+          - not_null
