@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: dim_products
+    description: Dimensão de produtos da Adventure Works. Para a construção dessa tabela, foram utilizados os dados contidos nas tabelas de products, subcategory e category. As demais informações acerca das colunas podem ser encontradas na documentação da int_products_enriched.
+    columns:
+      - name: pk_product
+        description: Chave primária da dimensão de produtos.
+        tests:
+          - unique
+          - not_null
