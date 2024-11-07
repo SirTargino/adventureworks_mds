@@ -11,3 +11,9 @@ sources:
       - name: productsubcategory
 
       - name: productcategory
+
+      - name: address
+
+      - name: stateprovince
+
+      - name: countryregion
