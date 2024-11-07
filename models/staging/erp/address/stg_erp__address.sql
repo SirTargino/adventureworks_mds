@@ -7,8 +7,11 @@ with
                 else ADDRESSLINE1 || ', ' || ADDRESSLINE2
             end as address
             , cast(CITY as string) as city
-            , cast(STATEPROVINCEID as int) as fk_state
+            , cast(STATEPROVINCEID as int) as fk_stateprovince
             -- Some postal codes use string characters
             , cast(POSTALCODE as string) as postal_code
         from {{ source('erp_adventureworks', 'address') }}
     )
+
+select *
+from rename
