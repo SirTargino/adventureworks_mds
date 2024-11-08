@@ -5,7 +5,7 @@ models:
     description: A tabela tem como finalidade preparar os dados da tabela category para serem usados na construção da dim_products
     columns:
       - name: pk_category
-        description: Chave primária da tabela de subcategoria.
+        description: Chave primária da tabela de categoria.
         data_tests:
           - unique
           - not_null

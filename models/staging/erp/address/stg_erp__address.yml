@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_erp__address
+    description: Tabela de preparação dos dados de endereço para a construção da dim_address
+    columns:
+      - name: pk_address
+        description: Chave primária da tabela de endereços.
+        data_tests:
+          - unique
+          - not_null
