@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: int_address_state_country.sql
+    description: Tabela intermediária de endereços que utiliza as informações das tabelas de address, stateprovince e countryregion.
+    columns:
+      - name: PK_ADDRESS
+        description: Chave primária da tabela de endereços
+        data_tests:
+          - unique
+          - not_null
+              
+      - name: ADDRESS
+        description: Logradouro do endereço. Contém informações como rua e número da residência.
+        
+      - name: POSTAL_CODE
+        description: Código postal do endereço
+      
+      - name: STATEPROVINCE_NAME
+        description: Nome do estado/província em que o endereço encontra-se
+        
+      - name: STATEPROVINCE_CODE
+        description: Código do estado/província do endereço
+        
+      - name: COUNTRY_NAME
+        description: Nome do país em que o endereço encontra-se
+        
+      - name: COUNTRY_CODE
+        description: Código do país em que o endereço está localizado.
