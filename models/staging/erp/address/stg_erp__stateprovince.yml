@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_erp__stateprovince
+    description: Tabela de ajustes iniciais das informações de estados e províncias que serão utilizadas na dim_address
+    columns:
+      - name: pk_stateprovince
+        description: Chave primária da tabela de estados e províncias.
+        data_tests:
+          - unique
+          - not_null
