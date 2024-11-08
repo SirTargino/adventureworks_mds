@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_erp__countryregion
+    description: Tabela que renomeia e ajusta as informações sobre país e região que serão utilizados na dim_address
+    columns:
+      - name: pk_countryregion
+        description: Chave primária da tabela de países e endereços.
+        data_tests:
+          - unique
+          - not_null
