@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: int_address_state_country.sql
+  - name: int_address_state_country
     description: Tabela intermediária de endereços que utiliza as informações das tabelas de address, stateprovince e countryregion.
     columns:
       - name: PK_ADDRESS
