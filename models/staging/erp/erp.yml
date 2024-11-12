@@ -21,3 +21,5 @@ sources:
       - name: customer
 
       - name: person
+
+      - name: store
