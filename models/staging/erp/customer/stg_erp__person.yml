@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_erp__person
+    description: Tabela de preparação para os dados de pessoa. Haverá um join dessa tabela com a de clientes para possibilitar extrair o nome do consumidor
+    columns:
+      - name: pk_person
+        description: Chave primária de person
+        data_tests:
+          - unique
+          - not_null

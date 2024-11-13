@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_erp__customer
+    description: Essa tabela renomeia colunas da tabela customer a fim de manter um padrão nos marts. Essas informações serão acrescidas dos dados de pessoa ou loja.
+    columns:
+      - name: pk_customer
+        description: Chave primária de consumidor
+        data_tests:
+          - unique
+          - not_null
