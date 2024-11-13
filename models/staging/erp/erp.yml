@@ -17,3 +17,9 @@ sources:
       - name: stateprovince
 
       - name: countryregion
+
+      - name: customer
+
+      - name: person
+
+      - name: store
