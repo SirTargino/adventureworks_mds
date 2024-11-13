@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: int_customer_typed
+    description: Tabela intermediária de consumidor, que exibe o tipo de cliente (pessoa ou loja), juntando também esses dados com as tabelas de pessoa ou loja.
+    columns:
+      - name: PK_CUSTOMER
+        description: Chave primária da tabela de consumidor
+        data_tests:
+          - unique
+          - not_null
+
+      - name: FK_PERSON
+        description: Chave estrangeira que faz o relacionamento entre a tabela de consumidor e a tabela de pessoas
+
+      - name: FK_STORE
+        description: Chave estrangeira que liga a tabela de consumidor a tabela de lojas
+
+      - name: CUSTOMER_TYPE
+        description: Discrimina o tipo de consumidor (loja/pessoa física). Se o cliente tiver cadastro como pessoa física e loja, serão exibidas as informações de pessoa física
+
+      - name: CUSTOMER_NAME
+        description: Nome do consumidor. Se o consumidor estiver cadastrado como pessoa física e jurídica, será exibido o nome da pessoa.

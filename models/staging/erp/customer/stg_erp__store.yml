@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_erp__store
+    description: Tabela que prepara os dados de loja (clientes que são lojas/pessoa jurídica) para junção com a tabela de consumidor
+    columns:
+      - name: pk_store
+        description: Chave primária de lojas
+        data_tests:
+          - unique
+          - not_null
