@@ -25,3 +25,5 @@ sources:
       - name: store
 
       - name: employee
+
+      - name: creditcard
