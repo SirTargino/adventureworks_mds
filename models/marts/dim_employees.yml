@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: dim_employees
+    description: Dimensão de funcionários. Utiliza os dados da tabela intermediária de funcionários que, por sua vez, faz uso das informações das tabelas de employee e de pessoa.
+    columns:
+      - name: PK_EMPLOYEE
+        description: Chave primária da tabela de funcionários
+        data_tests:
+          - unique
+          - not_null
+              
+      - name: EMPLOYEE_NAME
+        description: Nome do funcionário.
+        
+      - name: JOBTITLE
+        description: Cargo do funcionário.

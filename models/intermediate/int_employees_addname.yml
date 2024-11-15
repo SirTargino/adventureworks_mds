@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: int_employees_addname
+    description: Tabela que junta os dados da staging de funcionários com as informações da tabela de person, a fim de extrair o nome do funcionário.
+    columns:
+      - name: PK_EMPLOYEE
+        description: Chave primária da tabela de funcionários
+        data_tests:
+          - unique
+          - not_null
+              
+      - name: EMPLOYEE_NAME
+        description: Nome do funcionário.
+        
+      - name: JOBTITLE
+        description: Cargo do funcionário.
