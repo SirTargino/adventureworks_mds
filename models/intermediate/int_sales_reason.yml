@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: int_sales_reason
+    description: Tabela intermediária dos dados de motivo de venda, que utiliza os mesmos dados renomeados da tabela staging
+    columns:
+      - name: pk_sales_reason
+        description: Chave primária da tabela de motivo da venda.
+        data_tests:
+          - unique
+          - not_null
+      
+      - name: reason_name
+        description: Nome do motivo da venda
+
+      - name: reason_type
+        description: tipo do motivo da venda
