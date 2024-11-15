@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_erp__employees
+    description: Tabela que extrai e renomeia as informações de primary key e cargo da tabela de funcionários
+    columns:
+      - name: pk_employee
+        description: Chave primária de funcionário
+        data_tests:
+          - unique
+          - not_null
