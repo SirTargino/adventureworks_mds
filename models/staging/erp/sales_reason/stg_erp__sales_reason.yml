@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_erp__sales_reason
+    description: Tabela de preparação dos dados de motivo da venda, que extrai os dados da tabela salesreason
+    columns:
+      - name: pk_sales_reason
+        description: Chave primária da tabela de motivo da venda.
+        data_tests:
+          - unique
+          - not_null
