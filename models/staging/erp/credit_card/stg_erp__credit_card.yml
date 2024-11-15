@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: stg_erp__creditcard
+  - name: stg_erp__credit_card
     description: Tabela que extrai e renomeia os dados de cartão de crédito, extraindo apenas as informações válidas para as análises
     columns:
       - name: pk_credit_card

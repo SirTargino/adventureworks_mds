@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: int_creditcard
+  - name: int_credit_card
     description: Tabela intermediária, mas que contém os mesmos dados da tabela staging de cartão de crédito. Contém apenas um identificador (pk) e o tipo de cartão, preservando dados sensíveis.
     columns:
       - name: pk_credit_card
