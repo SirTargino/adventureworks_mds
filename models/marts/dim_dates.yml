@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: dim_dates
+    description: Dimensão de datas, gerada a partir dos packages dbt date e dbt utils
+    columns:
+      - name: sk_dates
+        description: Chave surrogada da tabela de datas.
+        tests:
+          - unique
+          - not_null
