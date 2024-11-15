@@ -5,3 +5,6 @@ with
             , cast(cardtype as string) as card_type
         from {{ source('erp_adventureworks', 'creditcard') }}
     )
+
+select *
+from rename
