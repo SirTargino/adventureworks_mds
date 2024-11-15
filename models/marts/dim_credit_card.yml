@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: dim_credit_card
+    description: Dimensão de cartão de crédito. Utiliza os dados da intermediate de cartão de crédito 
+    columns:
+      - name: pk_credit_card
+        description: Chave primária de cartões de crédito.
+        data_tests:
+          - unique
+          - not_null
+
+      - name: card_type
+        description: Tipo de cartão de crédito.
