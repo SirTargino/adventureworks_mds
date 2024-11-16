@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: stg_erp__salesdetails
+    description: Essa tabela contém os dados de produtos que compõem um pedido. Seu grão são os dados de um produto por pedido, como quantidade, valor unitário, desconto unitário, etc.
+    columns:
+      - name: pk_orderdetail
+        description: Chave primária da tabela de pedidos.
+        data_tests:
+          - not_null

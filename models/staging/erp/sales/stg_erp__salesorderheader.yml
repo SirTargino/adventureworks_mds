@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_erp__salesorderheader
+    description: Tabela de preparação dos dados de pedido. O grão dessa tabela é um pedido completo, com os valores totais e informações gerais.
+    columns:
+      - name: pk_sales
+        description: Chave primária da tabela de pedidos.
+        data_tests:
+          - unique
+          - not_null
