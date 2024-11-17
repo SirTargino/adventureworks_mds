@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: int_orderdetails
+    description: Tabela intermediária de detalhes de pedidos. A granularidade dessa tabela são as informações de 1 produto por pedido, como quantidade, desconto unitário, etc. Essas informações serão unidas na tabela agregada de pedidos, que conterá as informações completas sobre cada pedido.
+    columns:
+      - name: pk_orderdetail
+        description: Chave primária da tabela de detalhes de pedidos
+        data_tests:
+          - unique
+          - not_null
+              
+      - name: fk_sales
+        description: Chave estrangeira de vendas. Conecta-se a tabela agregada de vendas, identificando que cada linha faz parte de um produto
+        data_tests:
+          - not_null
+
+      - name: fk_product
+        description: Chave estrangeira de produtos. Mostra qual produto foi adicionado à lista do pedido.
+        data_tests:
+          - not_null
+      
+      - name: quantity
+        description: Quantidade do produto adicionada ao pedido.
+        
+      - name: unitprice
+        description: Valor unitário do produto em valores monetários.
+
+      - name: unitpricediscount
+        description: Desconto por unidade do produto. O percentual de desconto é representado em valores decimais.
+
+      - name: line_total
+        description: Campo calculado que indica o valor total da linha em valores monetários. Utiliza o cálculo (valor unitário - (desconto * valor unitário)) * quantidade
