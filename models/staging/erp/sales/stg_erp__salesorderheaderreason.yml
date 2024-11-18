@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_erp__salesorderheaderreason
+    description: Tabela de preparação dos dados de motivo do pedido, que ligará a fato de pedido ao tipo de motivo
+    columns:
+      - name: sk_orderheaderreason
+        description: Chave surrogada de motivo do pedido.
+        data_tests:
+          - unique
+          - not_null

@@ -4,14 +4,19 @@ models:
   - name: dim_sales_reason
     description: Dimensão de motivos de venda, que utiliza os dados da tabela intermediária de motivo de venda
     columns:
-    - name: pk_sales_reason
-      description: Chave primária da tabela de motivo da venda.
-      data_tests:
-        - unique
-        - not_null
-    
-    - name: reason_name
-      description: Nome do motivo da venda
+      - name: sk_orderheaderreason
+        description: Chave primária que identifica unicamente cada motivo associado a um pedido.
+        data_tests:
+          - unique
+          - not_null
 
-    - name: reason_type
-      description: tipo do motivo da venda
+      - name: fk_sales
+        description: Chave estrangeira que conecta a tabela de vendas, identificando qual pedido está relacionado ao motivo.
+        data_tests:
+          - not_null
+
+      - name: reason_name
+        description: Nome do motivo pelo qual o pedido foi realizado.
+
+      - name: reason_type
+        description: Tipo do motivo associado ao pedido.

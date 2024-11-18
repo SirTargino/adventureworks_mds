@@ -29,3 +29,9 @@ sources:
       - name: creditcard
 
       - name: salesreason
+
+      - name: salesorderheader
+
+      - name: salesorderdetail
+
+      - name: salesorderheadersalesreason

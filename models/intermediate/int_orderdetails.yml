@@ -1,0 +1,52 @@
+version: 2
+
+models:
+  - name: metrics
+    description: Tabela que contém os detalhes das vendas, incluindo cálculos de totais brutos e totais após descontos. A granularidade da tabela é por linha de pedido de produto, com informações como preço unitário, quantidade, descontos e o valor total de cada linha do pedido.
+    columns:
+      - name: pk_orderdetail
+        description: Chave primária da tabela de detalhes de pedidos.
+        data_tests:
+          - unique
+          - not_null
+          
+      - name: fk_sales
+        description: Chave estrangeira de vendas. Relaciona-se com a tabela de vendas, indicando a venda associada a cada linha de pedido.
+        data_tests:
+          - not_null
+
+      - name: fk_customer
+        description: Chave estrangeira de cliente. Relaciona-se com a tabela de clientes, indicando o cliente associado a cada pedido de venda.
+
+      - name: fk_employee
+        description: Chave estrangeira de funcionário. Relaciona-se com a tabela de funcionários, indicando o funcionário responsável pela venda.
+
+      - name: fk_territory
+        description: Chave estrangeira de território. Relaciona-se com a tabela de territórios, indicando o território associado à venda.
+
+      - name: fk_credit_card
+        description: Chave estrangeira de cartão de crédito. Relaciona-se com a tabela de cartões de crédito, indicando o método de pagamento utilizado para a venda.
+
+      - name: fk_product
+        description: Chave estrangeira de produto. Relaciona-se com a tabela de produtos, indicando o produto específico associado a cada linha de pedido.
+
+      - name: order_date
+        description: Data do pedido de venda. Representa a data em que a venda foi realizada.
+
+      - name: order_status
+        description: Status do pedido de venda. Indica o status atual do pedido.
+
+      - name: quantity
+        description: Quantidade do produto adicionada ao pedido. Representa a quantidade solicitada de um determinado produto.
+
+      - name: unitprice
+        description: Valor unitário do produto. Representa o preço de um único item do produto no momento da venda.
+
+      - name: unitpricediscount
+        description: Desconto unitário aplicado ao produto. Representa o percentual de desconto aplicado sobre o valor unitário do produto.
+
+      - name: gross_line_total
+        description: Campo calculado que indica o valor bruto total da linha de pedido, sem considerar descontos. Calculado como (unitprice * quantity).
+
+      - name: line_total
+        description: Campo calculado que indica o valor total da linha de pedido após descontos. Calculado como (unitprice - (unitprice * unitpricediscount)) * quantity.
