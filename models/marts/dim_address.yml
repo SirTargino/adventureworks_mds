@@ -4,8 +4,26 @@ models:
   - name: dim_address
     description: Dimensão de endereços da Adventure Works. Para a construção dessa tabela, foram utilizados os dados contidos nas tabelas address, stateprovince e countryregion. As colunas foram descritas na documentação da tabela intermediária de endereços.
     columns:
-      - name: pk_address
-        description: Chave primária da dimensão de endereços.
-        tests:
+      - name: PK_ADDRESS
+        description: Chave primária da tabela de endereços
+        data_tests:
           - unique
           - not_null
+              
+      - name: ADDRESS
+        description: Logradouro do endereço. Contém informações como rua e número da residência.
+        
+      - name: POSTAL_CODE
+        description: Código postal do endereço
+      
+      - name: STATEPROVINCE_NAME
+        description: Nome do estado/província em que o endereço encontra-se
+        
+      - name: STATEPROVINCE_CODE
+        description: Código do estado/província do endereço
+        
+      - name: COUNTRY_NAME
+        description: Nome do país em que o endereço encontra-se
+        
+      - name: COUNTRY_CODE
+        description: Código do país em que o endereço está localizado.
