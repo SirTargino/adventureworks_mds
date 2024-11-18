@@ -1,8 +1,8 @@
 version: 2
 
 models:
-  - name: metrics
-    description: Tabela que contém os detalhes das vendas, incluindo cálculos de totais brutos e totais após descontos. A granularidade da tabela é por linha de pedido de produto, com informações como preço unitário, quantidade, descontos e o valor total de cada linha do pedido.
+  - name: fct_sales
+    description: Tabela de fatos de vendas. A granularidade dessa tabela é por linha de produto de cada pedido, contendo informações transacionais detalhadas sobre cada venda, incluindo dados do cliente, funcionário, produto, e os totais de cada linha com e sem desconto.
     columns:
       - name: pk_orderdetail
         description: Chave primária da tabela de detalhes de pedidos.

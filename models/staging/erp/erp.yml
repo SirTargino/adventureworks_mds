@@ -33,3 +33,5 @@ sources:
       - name: salesorderheader
 
       - name: salesorderdetail
+
+      - name: salesorderheadersalesreason

@@ -8,10 +8,10 @@ with
             , cast(CREDITCARDID as int) as fk_credit_card
             , cast(ORDERDATE as date) as order_date
             , cast(STATUS as int) as order_status
-            , cast(SUBTOTAL as numeric(18,2)) as subtotal
-            , cast(TAXAMT as numeric(18,2)) as taxes
-            , cast(FREIGHT as numeric(18,2)) as FREIGHT
-            , cast(TOTALDUE as numeric(18,2)) as total_due
+            , cast(SUBTOTAL as numeric(18,4)) as subtotal
+            , cast(TAXAMT as numeric(18,4)) as taxes
+            , cast(FREIGHT as numeric(18,4)) as FREIGHT
+            , cast(TOTALDUE as numeric(18,4)) as total_due
         from {{ source('erp_adventureworks', 'salesorderheader') }}
     )
 

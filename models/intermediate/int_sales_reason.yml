@@ -1,17 +1,22 @@
 version: 2
 
 models:
-  - name: int_sales_reason
-    description: Tabela intermediária dos dados de motivo de venda, que utiliza os mesmos dados renomeados da tabela staging
+  - name: int_sales_reasons
+    description: Tabela de associação entre pedidos de vendas e os motivos relacionados a cada pedido. Esta tabela captura o motivo pelo qual um pedido foi realizado, incluindo o tipo do motivo.
     columns:
-      - name: pk_sales_reason
-        description: Chave primária da tabela de motivo da venda.
+      - name: sk_orderheaderreason
+        description: Chave primária que identifica unicamente cada motivo associado a um pedido.
         data_tests:
           - unique
           - not_null
-      
+
+      - name: fk_sales
+        description: Chave estrangeira que conecta a tabela de vendas, identificando qual pedido está relacionado ao motivo.
+        data_tests:
+          - not_null
+
       - name: reason_name
-        description: Nome do motivo da venda
+        description: Nome do motivo pelo qual o pedido foi realizado.
 
       - name: reason_type
-        description: tipo do motivo da venda
+        description: Tipo do motivo associado ao pedido.
