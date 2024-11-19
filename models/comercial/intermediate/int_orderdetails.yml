@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: metrics
+  - name: int_orderdetails
     description: Tabela que contém os detalhes das vendas, incluindo cálculos de totais brutos e totais após descontos. A granularidade da tabela é por linha de pedido de produto, com informações como preço unitário, quantidade, descontos e o valor total de cada linha do pedido.
     columns:
       - name: pk_orderdetail

@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: int_sales_reasons
+  - name: int_sales_reason
     description: Tabela de associação entre pedidos de vendas e os motivos relacionados a cada pedido. Esta tabela captura o motivo pelo qual um pedido foi realizado, incluindo o tipo do motivo.
     columns:
       - name: sk_orderheaderreason
