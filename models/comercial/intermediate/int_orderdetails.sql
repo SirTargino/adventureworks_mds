@@ -29,7 +29,10 @@ with
             , sales.fk_credit_card
             , details.fk_product
             , sales.order_date
-            , sales.order_status
+            , CASE 
+                WHEN sales.order_status = 5 THEN 'Finished'
+                ELSE 'Pending'
+            END as order_status
             , details.quantity
             , details.unitprice
             , details.unitpricediscount
